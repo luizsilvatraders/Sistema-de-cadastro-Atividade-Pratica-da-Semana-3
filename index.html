@@ -1,0 +1,87 @@
+<!-- Adaptação do arquivo index.html (5 pontos) -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Sistema de Cadastro de Jogos</title>
+</head>
+
+<body class="p-3 m-0 border-0">
+
+  <h1 class="text-center">Sistema de Cadastro de Jogos</h1>
+  <hr>
+
+  <form name="form1" action="#" method="POST" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome do jogo</label>
+      <input type="text" class="form-control" id="nome" required>
+      <div class="invalid-feedback">Informe o nome corretamente.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="desenvolvedora" class="form-label">Desenvolvedora do jogo</label>
+      <input type="text" class="form-control" id="desenvolvedora" required>
+      <div class="invalid-feedback">Informe a desenvolvedora corretamente.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="plataforma" class="form-label">Plataforma</label>
+      <select id="plataforma" class="form-select" required>
+        <option value="" disabled selected>Selecione a plataforma...</option>
+        <option value="PC">PC</option>
+        <option value="PlayStation">PlayStation</option>
+        <option value="Xbox">Xbox</option>
+        <option value="Nintendo">Nintendo</option>
+      </select>
+      <div class="invalid-feedback">Informe a plataforma corretamente.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="ano_lancamento" class="form-label">Ano de Lançamento</label>
+      <input type="text" class="form-control" id="ano_lancamento" placeholder="AAAA" pattern="\d{4}" required>
+      <div id="feedbackAnoLancamento" class="invalid-feedback">Informe o ano de lançamento corretamente.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="genero" class="form-label">Gênero</label>
+      <select id="genero" class="form-select" required>
+        <option value="" disabled selected>Selecione o gênero...</option>
+        <option value="Ação">Ação</option>
+        <option value="Aventura">Aventura</option>
+        <option value="Estratégia">Estratégia</option>
+        <option value="RPG">RPG</option>
+      </select>
+      <div class="invalid-feedback">Informe o gênero corretamente.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="serie" class="form-label">Número de série de fabricação</label>
+      <input type="number" class="form-control" id="serie" required>
+      <div id="feedbackSerie" class="invalid-feedback">Informe o número de série de fabricação corretamente.</div>
+    </div>
+    <div class=" col-md-12 text-right">
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </div>
+  </form>
+  <hr>
+  <table class="table table-striped" id="tabela">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome do Jogo</th>
+        <th scope="col">Desenvolvedora</th>
+        <th scope="col">Plataforma</th>
+        <th scope="col">Ano de Lançamento</th>
+        <th scope="col">Gênero do Jogo</th>
+        <th scope="col">Número de Série de fabricação</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+
+</html>
